@@ -1,6 +1,6 @@
 # STATO-01 — Avanzamento del percorso formativo
 
-**Aggiornato al:** 13/07/2026 (sera) · **Prossima milestone: CORSO 1 IN AULA, 22–23 luglio**
+**Aggiornato al:** 13/07/2026 · **MANUALE COMPLETO (F1–F6 + M1–M22)** · **Prossima milestone: CORSO 1 IN AULA, 22–23 luglio**
 
 ## ✅ Fatto
 
@@ -16,6 +16,7 @@
 | Sito: fogli riservati (verbale + programma esercizio) | v1.0 | dispense-riservate.html |
 | Kit d'aula (programma, note, esercizi, chiavi, quiz) | v1.0 | src/aula/ |
 | **Manuale Parte I–II (M1–M6)** | v0.1 | manuale-operativo.html + src/manuale/ |
+| **Manuale Parti III–VII (M7–M22)** | v0.1 | ricette.html + src/manuale/ |
 | Questionario pre-corso | v1.0 | in dispense.html + src/aula/ |
 
 ## 🔜 Prima del 22 luglio (azioni tue)
@@ -29,13 +30,13 @@
 - Integrare le risposte del questionario negli esercizi
 - Eventuali ritocchi ai deck dopo il tuo controllo in PowerPoint
 
-## 📦 Dopo il corso (backlog ordinato)
+## 📦 Dopo il corso (backlog)
 
-1. **Manuale Parte III** (M7–M14): le ricette operative; la mail sponsor reale è già registrata per M7
-2. Manuale Parti IV–VII (qualità, riferimenti rapidi, registro aggiornamenti M22, libreria)
-3. **Corso 3 — AI Software Architect** (A1–A15): non iniziato
-4. Policy dati (F6 §7): da far adottare alla direzione
-5. Processi da documentare (M13): proposta in DATI-01 §8, da confermare
+1. **Corso 3 — AI Software Architect** (A1–A15): non iniziato — è il prodotto che resta
+2. Policy dati (F6 §7): da far adottare alla direzione
+3. Processi da documentare (M13): 5 candidati in DATI-01 §8, da confermare
+4. Piano dei 90 giorni (M20): parte dopo il corso
+5. Revisione semestrale dei [FATTO] (M22): prima scadenza → gennaio 2027
 
 ## ❓ Decisioni aperte
 
