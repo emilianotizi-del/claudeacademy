@@ -1,0 +1,3 @@
+exclude:
+  - riservato/
+  - src/
