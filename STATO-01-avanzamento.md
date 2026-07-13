@@ -30,10 +30,16 @@
 - Integrare le risposte del questionario negli esercizi
 - Eventuali ritocchi ai deck dopo il tuo controllo in PowerPoint
 
+## 🚧 In corso
+
+**Corso 3 — AI Software Architect** (solo direzione). Progetto scelto: **Giano** (piattaforma di governance associativa). Ritmo: modulo → esecuzione → modulo successivo. Ambizione: prodotto.
+- ✅ ARCH-02 v0.2 (architettura, confini di responsabilità, fetta verticale "Soci, quote e rinnovi")
+- ✅ A1 — Dirigere lo sviluppo · deliverable: carta del progetto
+- ⏭️ A2 (vocabolario) in attesa delle 4 informazioni: Aurora/Madeira/LMS, materiale Giano esistente, fornitore tecnico, associazione pilota
+
 ## 📦 Dopo il corso (backlog)
 
-1. **Corso 3 — AI Software Architect** (A1–A15): non iniziato — è il prodotto che resta
-2. Policy dati (F6 §7): da far adottare alla direzione
+1. Policy dati (F6 §7): da far adottare alla direzione
 3. Processi da documentare (M13): 5 candidati in DATI-01 §8, da confermare
 4. Piano dei 90 giorni (M20): parte dopo il corso
 5. Revisione semestrale dei [FATTO] (M22): prima scadenza → gennaio 2027
