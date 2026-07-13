@@ -187,3 +187,12 @@ img,svg{max-width:100%;height:auto}
 .side ul a.attivo{background:#fff;color:var(--navy);font-weight:700}
 .side ul a .code{font-family:var(--mono);font-size:.72rem;font-weight:600;padding-top:.1rem;color:#A9AEDA}
 .side ul a.attivo .code{color:var(--peri)}
+
+/* Il grassetto dentro i box scuri deve restare leggibile (era navy su navy) */
+.regola strong,.regola em,.regola b,.regola a,
+.prompt strong,.prompt em,.prompt b,
+pre.cod strong,pre.cod b,
+.parte strong,.parte em{color:inherit}
+.regola strong,.prompt strong{font-weight:700}
+.regola a{text-decoration:underline}
+.prompt.nudo strong{color:var(--ink)}

@@ -7,8 +7,10 @@
 .parte{background:var(--navy);color:#fff;border-radius:14px;padding:1.1rem 1.4rem;margin:3.4rem 0 .5rem}
 .parte h2{color:#fff;font-size:1.5rem;margin:0}
 article h3 .n{color:var(--peri);margin-right:.45rem;font-family:var(--mono);font-size:.8em}
-pre.cod{background:var(--navy);color:#E7EAF7;border-radius:12px;padding:1rem 1.15rem;overflow-x:auto;-webkit-overflow-scrolling:touch;font-family:var(--mono);font-size:.82rem;line-height:1.55;margin-top:1rem;white-space:pre;max-width:100%}
-@media (max-width:640px){pre.cod{font-size:.72rem;padding:.8rem .85rem}.parte h2{font-size:1.2rem}}
+pre.cod{background:var(--navy);color:#E7EAF7;border-radius:12px;padding:1rem 1.15rem;font-family:var(--mono);font-size:.82rem;line-height:1.55;margin-top:1rem;max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere;hyphens:none}
+pre.cod.diag{white-space:pre;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+@media (max-width:760px){pre.cod.diag::after{content:"\2194 scorri per vedere tutto";display:block;margin-top:.55rem;font-family:var(--disp);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:#8F95C6}}
+@media (max-width:640px){pre.cod{font-size:.74rem;padding:.85rem .9rem;line-height:1.6}.parte h2{font-size:1.2rem}}
 article h4{margin-top:1.4rem;font-family:var(--disp);font-size:1.05rem;color:var(--navy)}
 .riservato{display:inline-block;background:var(--magenta-t);color:#8A2E5F;font-family:var(--disp);font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .6rem;border-radius:99px}
 </style></head><body>
@@ -1138,7 +1140,7 @@ Costo mensile = costo per operazione × operazioni per utente × utenti</pre>
 <p>Supabase è Postgres con un&#x27;API HTTP davanti. <strong>Questa singola frase contiene tutto ciò che devi capire — e tutti i modi in cui ci si fa male.</strong></p>
 <p>Perché &quot;un&#x27;API davanti al database&quot; significa che <strong>il tuo database è esposto a Internet</strong>, e l&#x27;unica cosa che separa i tuoi dati da chiunque è la configurazione che hai fatto (o dimenticato di fare). Non è un difetto: è il patto. Ma va conosciuto.</p>
 <h3><span class="n">1.</span>Il modello mentale corretto</h3>
-<pre class="cod">Browser  ──[chiave publishable, pubblica]──►  PostgREST  ──►  Postgres
+<pre class="cod diag">Browser  ──[chiave publishable, pubblica]──►  PostgREST  ──►  Postgres
                                                    ▲
                                           RLS: l&#x27;unica difesa
 Server   ──[chiave secret / service_role]──────────┴──► Postgres (BYPASSA TUTTO)</pre>
@@ -1240,7 +1242,7 @@ non proporla.</pre>
 <p class="changelog">v1.0 — focus di stack; fatti verificati su supabase.com/docs il 13/07/2026.</p></article><article id="a19"><div class="mod-head"><span class="mod-code">A19</span><div><h2>Focus: Vercel, dal punto di vista dell&#x27;architetto</h2><p class="mod-meta">Corso 3 · Parte F · Focus di stack · v1.0</p></div></div><p><em>Fonti verificate il 13/07/2026: vercel.com/docs (deployment protection, environment variables, functions).</em></p>
 <p>Vercel è <strong>una macchina che trasforma un commit in un sito online</strong>, con una rete di distribuzione davanti e delle funzioni che girano su richiesta. Il valore è reale: elimina un&#x27;intera categoria di lavoro (server, deploy, certificati, scalabilità). <strong>Il prezzo è che alcune decisioni importanti vengono prese per te, e altre — le più pericolose — restano tue senza che tu te ne accorga.</strong></p>
 <h3><span class="n">1.</span>Il modello mentale</h3>
-<pre class="cod">git push  ──►  build  ──►  deploy immutabile  ──►  URL
+<pre class="cod diag">git push  ──►  build  ──►  deploy immutabile  ──►  URL
                                  │
       ┌──────────────────────────┼──────────────────────────┐
    PRODUZIONE                 PREVIEW                    LOCALE
