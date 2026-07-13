@@ -130,3 +130,60 @@ tr.warn td:first-child{border-left:4px solid var(--magenta);background:var(--mag
 .changelog{margin-top:2.6rem;border-top:1px solid var(--line);padding-top:1rem;font-family:var(--mono);font-size:.76rem;color:var(--muted)}
 footer.page{margin-top:3rem;padding:1.4rem 3.2rem;background:var(--card);font-family:var(--disp);font-size:.8rem;color:var(--muted)}
 @media print{.side{display:none}.wrap{display:block}main{max-width:none;padding:0}}
+
+/* ===== Ottimizzazioni mobile ===== */
+html,body{overflow-x:hidden}
+main{min-width:0}
+img,svg{max-width:100%;height:auto}
+
+/* Tabelle: scorrimento orizzontale invece di schiacciamento */
+@media (max-width:760px){
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:normal;font-size:.86rem;min-width:0}
+  table thead th{white-space:nowrap}
+  table td{min-width:8.5rem}
+  table td:first-child,table th:first-child{position:sticky;left:0;background:#fff;z-index:1}
+}
+
+/* Testi e spazi su schermo stretto */
+@media (max-width:640px){
+  main{padding:1.2rem .95rem 2.6rem}
+  .hero h2{font-size:1.6rem;line-height:1.2}
+  article h2{font-size:1.45rem;line-height:1.25}
+  article h3{font-size:1.15rem}
+  article h4{font-size:1rem}
+  p,li{font-size:1rem;line-height:1.6}
+  .mod-head{gap:.6rem}
+  .mod-code{font-size:.9rem;padding:.3rem .5rem}
+  .mod-meta{font-size:.78rem}
+  .toc{gap:.3rem}
+  .toc a{font-size:.78rem;padding:.28rem .5rem}
+  .prompt p,.regola{font-size:.95rem}
+  .quote{font-size:1.15rem;line-height:1.4}
+  blockquote,.regola{padding:.85rem 1rem}
+  ol,ul{padding-left:1.1rem}
+  .punti{grid-template-columns:1fr}
+}
+
+/* Blocchi di codice: leggibili e scorrevoli, mai causa di zoom */
+@media (max-width:640px){
+  pre,pre.cod,code{font-size:.76rem;line-height:1.5}
+  pre,pre.cod{padding:.85rem .9rem;border-radius:10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  code{word-break:break-word}
+}
+
+/* Target tattili adeguati nel menu */
+@media (max-width:900px){
+  nav a,nav .soon{padding:.6rem .55rem}
+  .side{padding:1.2rem 1.1rem 2rem}
+}
+
+/* Voci sidebar anche fuori dal tag <nav> (pagine corsi/ricette) */
+.side ul{list-style:none;margin:.4rem 0 1rem;padding:0}
+.side ul li{margin:0}
+.side ul a{display:grid;grid-template-columns:2.6rem 1fr;column-gap:.5rem;align-items:start;
+  padding:.5rem .55rem;border-radius:8px;text-decoration:none;color:#EDEFFB;
+  font-family:var(--disp);font-size:.86rem;line-height:1.35}
+.side ul a:hover{background:#2C3470}
+.side ul a.attivo{background:#fff;color:var(--navy);font-weight:700}
+.side ul a .code{font-family:var(--mono);font-size:.72rem;font-weight:600;padding-top:.1rem;color:#A9AEDA}
+.side ul a.attivo .code{color:var(--peri)}
