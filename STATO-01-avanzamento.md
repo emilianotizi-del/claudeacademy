@@ -32,11 +32,7 @@
 
 ## ✅ Corso 3
 
-**Corso 3 — AI Software Architect** (solo direzione). Progetto scelto: **Giano** (piattaforma di governance associativa). Ritmo: modulo → esecuzione → modulo successivo. Ambizione: prodotto.
-- ✅ ARCH-02 v0.2 (architettura, confini di responsabilità, fetta verticale "Soci, quote e rinnovi")
-- ✅ A1 — Dirigere lo sviluppo · deliverable: carta del progetto
-- ✅ **Corso 3 completo: A1–A15, teorico** (architect.html) — su richiesta della direzione, senza progetto applicato
-- ARCH-02 v0.2 e A1 v0.1 (versione legata a Giano) restano in src/corso3 come materiale superato/opzionale
+**Corso 3 — AI Software Architect** (solo direzione): 15 moduli teorici, A1–A15.
 
 ## 📦 Dopo il corso (backlog)
 
