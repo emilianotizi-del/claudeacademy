@@ -19,7 +19,7 @@ article h4{margin-top:1.4rem;font-family:var(--disp);font-size:1.05rem;color:var
   <img src="logo.png" alt="Hera Foundation">
   <p class="kicker">Percorso formativo AI</p>
   <h1>AI Software Architect</h1>
-  <p class="vers">Corso 3 · A1–A17 · v1.0</p>
+  <p class="vers">Corso 3 · A1–A19 · v1.0</p>
   <p class="kicker">Altri materiali</p>
   <ul>
     <li><a href="index.html"><span class="code">MAN</span>Manuale (F1–F6)</a></li>
@@ -58,11 +58,16 @@ article h4{margin-top:1.4rem;font-family:var(--disp);font-size:1.05rem;color:var
     <li><a href="#a16"><span class="code">A16</span>Economia del software: costi veri, fornitori, e la soglia del prodotto</a></li>
     <li><a href="#a17"><span class="code">A17</span>Il metodo: dal problema al sistema che regge</a></li>
   </ul>
+  <p class="kicker">Parte F · Focus di stack</p>
+  <ul>
+    <li><a href="#a18"><span class="code">A18</span>Focus: Supabase, dal punto di vista dell&#x27;architetto</a></li>
+    <li><a href="#a19"><span class="code">A19</span>Focus: Vercel, dal punto di vista dell&#x27;architetto</a></li>
+  </ul>
 </aside>
 <main>
 <div class="hero"><p class="eyebrow"><span class="riservato">Riservato alla direzione</span></p>
 <h2>Dirigere lo sviluppo software</h2>
-<p class="uso">Diciassette moduli. Non nozioni: <strong>strumenti</strong> — template, checklist, prompt operativi, criteri di decisione, tassonomie di errore. Il presupposto è uno solo: il codice è diventato abbondante, la comprensione no, e il mestiere è tutto lì.</p></div>
+<p class="uso">Diciannove moduli, inclusi due focus su <strong>Supabase</strong> e <strong>Vercel</strong>. Non nozioni: <strong>strumenti</strong> — template, checklist, prompt operativi, criteri di decisione, tassonomie di errore. Il presupposto è uno solo: il codice è diventato abbondante, la comprensione no, e il mestiere è tutto lì.</p></div>
 <div class="parte"><h2>Parte A · Il mestiere</h2></div><article id="a1"><div class="mod-head"><span class="mod-code">A1</span><div><h2>Il mestiere: cosa fai tu, cosa fa la macchina</h2><p class="mod-meta">Corso 3 · Parte A · v1.0</p></div></div><h3><span class="n">1.</span>La ridistribuzione del lavoro</h3>
 <p>Un progetto software è fatto di sei attività distinte. Prima le facevano persone diverse; il punto non è che ora &quot;l&#x27;AI programma&quot;, è che <strong>la distribuzione è cambiata in modo asimmetrico</strong>.</p>
 <table><thead><tr><th>Attività</th><th>Chi la faceva</th><th>Chi la fa ora</th><th>Costo marginale oggi</th></tr></thead><tbody><tr><td>Decidere cosa costruire</td><td>Committente</td><td><strong>Tu</strong></td><td>Alto (è pensiero)</td></tr><tr><td>Progettare la struttura</td><td>Architetto/senior</td><td><strong>Tu + AI</strong></td><td>Medio</td></tr><tr><td>Scrivere il codice</td><td>Sviluppatori</td><td><strong>AI</strong></td><td>~Zero</td></tr><tr><td>Verificare che sia giusto</td><td>Sviluppatori + QA</td><td><strong>Tu</strong> (con strumenti)</td><td><strong>Alto e crescente</strong></td></tr><tr><td>Mantenere nel tempo</td><td>Team</td><td><strong>Tu</strong></td><td>Alto</td></tr><tr><td>Capire il sistema</td><td>Il team, collettivamente</td><td><strong>Solo tu</strong></td><td><strong>Altissimo</strong></td></tr></tbody></table>
@@ -1128,7 +1133,168 @@ Costo mensile = costo per operazione × operazioni per utente × utenti</pre>
 <p>Il resto è esecuzione. E l&#x27;esecuzione, ormai, è abbondante.</p>
 <h3>L&#x27;intero corso, in dodici righe</h3>
 <ol><li>Il codice è gratis. La comprensione no. Ogni riga che non capisci è debito. <strong>(A1)</strong></li><li>Le decisioni irreversibili meritano tempo; le altre, no. <strong>(A2)</strong></li><li>Se non sai dire quando è finito, non hai specificato: hai desiderato. <strong>(A3)</strong></li><li>Piano prima dell&#x27;azione; sessioni corte; consolida sempre. <strong>(A4)</strong></li><li>La velocità sostenibile è una funzione della reversibilità. <strong>(A5)</strong></li><li>Costruisci ciò che ti differenzia, compra il resto, evita il superfluo. <strong>(A6)</strong></li><li>Il modello dati è la decisione che si paga per anni: se qualcuno può chiedere &quot;com&#x27;era allora?&quot;, registri eventi. <strong>(A7)</strong></li><li>Non verificare tutto: rendi impossibile che l&#x27;importante passi inosservato. <strong>(A8)</strong></li><li>L&#x27;AI non aggiunge vulnerabilità: dimentica controlli. Metti l&#x27;autorizzazione dove non si può dimenticare. <strong>(A9)</strong></li><li>Non chiedere &quot;risolvi&quot;: chiedi &quot;perché accade&quot;. <strong>(A10, A11)</strong></li><li>Rilascia piccolo, spesso, reversibile — e conta le righe prima e dopo ogni migrazione. <strong>(A12)</strong></li><li>Il codice è commodity; il dominio no. <strong>(A14, A15, A16)</strong></li></ol>
-<p class="changelog">v1.0 — sintesi; sostituisce il precedente A15.</p></article>
+<p class="changelog">v1.0 — sintesi; sostituisce il precedente A15.</p></article><div class="parte"><h2>Parte F · Focus di stack</h2></div><article id="a18"><div class="mod-head"><span class="mod-code">A18</span><div><h2>Focus: Supabase, dal punto di vista dell&#x27;architetto</h2><p class="mod-meta">Corso 3 · Parte F · Focus di stack · v1.0</p></div></div><p><em>Fonti verificate il 13/07/2026: supabase.com/docs (Row Level Security, Securing your API, Securing your data).</em></p>
+<p>Supabase è Postgres con un&#x27;API HTTP davanti. <strong>Questa singola frase contiene tutto ciò che devi capire — e tutti i modi in cui ci si fa male.</strong></p>
+<p>Perché &quot;un&#x27;API davanti al database&quot; significa che <strong>il tuo database è esposto a Internet</strong>, e l&#x27;unica cosa che separa i tuoi dati da chiunque è la configurazione che hai fatto (o dimenticato di fare). Non è un difetto: è il patto. Ma va conosciuto.</p>
+<h3><span class="n">1.</span>Il modello mentale corretto</h3>
+<pre class="cod">Browser  ──[chiave publishable, pubblica]──►  PostgREST  ──►  Postgres
+                                                   ▲
+                                          RLS: l&#x27;unica difesa
+Server   ──[chiave secret / service_role]──────────┴──► Postgres (BYPASSA TUTTO)</pre>
+<p><strong>Due chiavi, due mondi:</strong></p>
+<table><thead><tr><th>Chiave</th><th>Dove vive</th><th>Cosa fa</th></tr></thead><tbody><tr><td><strong>publishable</strong> (già <em>anon</em>)</td><td>Nel browser. <strong>È pubblica per progetto.</strong> Chiunque apre il tuo sito la vede</td><td>Può fare <strong>solo</strong> ciò che le RLS permettono</td></tr><tr><td><strong>secret / service_role</strong></td><td><strong>Solo sul server.</strong> Mai, in nessuna circostanza, nel browser</td><td><strong>Bypassa le RLS.</strong> È l&#x27;accesso root al database</td></tr></tbody></table>
+<div class="regola"><strong>La chiave publishable non è un segreto e non deve esserlo. La sicurezza non sta nella chiave: sta nelle policy.</strong> Chi ragiona come se la chiave fosse una password ha già perso, perché quella chiave è nel bundle JavaScript di ogni visitatore.</div>
+<h3><span class="n">2.</span>RLS: la cosa che devi capire davvero</h3>
+<p>Row Level Security è una funzione di Postgres: <strong>aggiunge implicitamente una condizione a ogni query</strong>. Con RLS attiva e una policy scritta bene, una query che dimentica il filtro <strong>non restituisce le righe altrui: non ne restituisce nessuna.</strong></p>
+<p>È esattamente la difesa strutturale di cui parlavo in A9 e A17: <strong>l&#x27;autorizzazione messa dove non si può dimenticare.</strong> Ed è il motivo per cui Supabase, usato bene, è più sicuro di un backend tradizionale scritto in fretta — dove il filtro dipende dal fatto che uno sviluppatore (o un agente) si ricordi di scriverlo in ognuna delle 200 query.</p>
+<h4>Le tre regole non negoziabili</h4>
+<p><strong>1 · RLS attiva su OGNI tabella dello schema esposto (<code>public</code>). Nessuna eccezione.</strong></p>
+<p>[FATTO, docs] La RLS viene attivata <strong>automaticamente solo</strong> se crei la tabella dal Table Editor della dashboard. <strong>Se la crei via SQL, via migrazione, o tramite un agente AI — non viene attivata.</strong></p>
+<p>Rileggi la frase precedente, perché è <strong>la singola causa più frequente di fughe di dati nei progetti costruiti con l&#x27;AI</strong>. L&#x27;agente scrive <code>CREATE TABLE</code>, la tabella è raggiungibile via API dal primo istante, l&#x27;app funziona benissimo in sviluppo (un utente), funziona in produzione (un utente), e <strong>funziona anche per l&#x27;utente B che digita l&#x27;ID dell&#x27;utente A</strong>.</p>
+<p>La verifica, da eseguire come un rito, dopo ogni sessione che tocca lo schema:</p>
+<pre class="cod">SELECT tablename, rowsecurity
+FROM pg_tables
+WHERE schemaname = &#x27;public&#x27; AND rowsecurity = false;</pre>
+<p><strong>Ogni riga in quel risultato è una tabella leggibile da chiunque abbia il tuo URL.</strong> Il risultato deve essere vuoto. Sempre.</p>
+<p><strong>2 · RLS attiva senza policy = tabella inaccessibile.</strong> È il default sicuro: nega tutto. Quindi l&#x27;ordine giusto è <strong>attiva RLS, poi scrivi le policy</strong> — mai il contrario, perché nel frattempo la tabella è aperta.</p>
+<p><strong>3 · La chiave <code>service_role</code> non tocca mai il browser.</strong> [FATTO, docs] Bypassa le RLS: se finisce nel bundle, hai regalato il database. I percorsi di fuga tipici sono banali e frequentissimi: messa in una variabile <code>NEXT_PUBLIC_*</code> (che per definizione finisce nel browser), committata &quot;solo per la demo&quot;, stampata nei log all&#x27;avvio, restituita in un messaggio d&#x27;errore.</p>
+<h3><span class="n">3.</span>Il Security Advisor: il tuo alleato più economico</h3>
+<p>[FATTO] Supabase include un <strong>Security Advisor</strong> nella dashboard: un linter che segnala esattamente i problemi di questo modulo — RLS disattivata su tabelle pubbliche, RLS attiva senza policy, viste <code>security definer</code>, funzioni con <code>search_path</code> mutabile, colonne sensibili esposte.</p>
+<p><strong>Regola operativa: si esegue dopo ogni modifica allo schema.</strong> È gratis, dura dieci secondi, e cattura la classe di errori che l&#x27;AI produce più spesso. È l&#x27;equivalente del &quot;comando unico di verifica&quot; (→ A4), per la parte database.</p>
+<h3><span class="n">4.</span>Il multi-tenancy in Supabase (il pattern che devi conoscere)</h3>
+<p>Riprendo A17 §3 e lo rendo concreto.</p>
+<h4>La policy ingenua che ti tradirà</h4>
+<pre class="cod">create policy &quot;membri leggono la propria organizzazione&quot;
+on documenti for select
+using (
+  organizzazione_id in (
+    select organizzazione_id from membri where utente_id = auth.uid()
+  )
+);</pre>
+<p>Funziona. <strong>Ma:</strong> questa sotto-query viene valutata <strong>per ogni riga esaminata</strong>. Su tabelle grandi, la policy che ti protegge diventa la ragione per cui il sistema è inutilizzabile — e a quel punto la tentazione (sbagliatissima) è disattivarla.</p>
+<h4>Il pattern corretto</h4>
+<p>[BP, docs] Due mosse, entrambe documentate ufficialmente:</p>
+<p><strong>a) Avvolgi le funzioni in un <code>select</code></strong>, così il risultato viene calcolato una volta e messo in cache dal planner:</p>
+<pre class="cod">using ( organizzazione_id in (select ...) )   -- non ripetuto per riga</pre>
+<p>E lo stesso vale per <code>auth.uid()</code>: si scrive <code>(select auth.uid())</code>, non <code>auth.uid()</code> nudo.</p>
+<p><strong>b) Usa una funzione <code>security definer</code></strong> per la ricerca delle appartenenze, così quella lettura non paga a sua volta il costo delle RLS:</p>
+<pre class="cod">create function ha_ruolo_su(org uuid) returns boolean
+language sql security definer stable
+set search_path = &#x27;&#x27;            -- ← obbligatorio: search_path mutabile = vulnerabilità
+as $$
+  select exists (
+    select 1 from public.membri
+    where utente_id = (select auth.uid()) and organizzazione_id = org
+  );
+$$;</pre>
+<p>[FATTO, docs] <strong>Le funzioni <code>security definer</code> non devono mai vivere in uno schema esposto</strong> dall&#x27;API. E <code>set search_path = &#x27;&#x27;</code> non è un vezzo: senza, la funzione è aggredibile.</p>
+<p><strong>c) Metti sempre <code>to authenticated</code></strong> nelle policy: senza, vengono valutate anche per il ruolo anonimo, inutilmente.</p>
+<p><strong>d) Indicizza la colonna del tenant.</strong> La policy filtra su <code>organizzazione_id</code>: senza indice, ogni query è una scansione completa (→ A11).</p>
+<h4>La regola di prestazione che sintetizza tutto</h4>
+<div class="regola"><strong>Filtra esplicitamente nella query anche ciò che la RLS filtrerebbe comunque.</strong> <code>.eq(&#x27;organizzazione_id&#x27;, org)</code> nel codice, <em>oltre</em> alla policy. La RLS è la <strong>difesa</strong>; il filtro esplicito è la <strong>prestazione</strong> — e permette a Postgres di usare gli indici. Averli entrambi non è ridondanza: è cintura più bretelle, dove la cintura protegge e le bretelle fanno andare veloce.</div>
+<h3><span class="n">5.</span>Il test che scrivi una volta e ti salva per sempre</h3>
+<p>Da A9 e A17, calato su Supabase:</p>
+<pre class="cod">Scrivi un test di isolamento fra tenant:
+1. Crea due organizzazioni, A e B, ciascuna con un utente e alcuni record.
+2. Autenticati come utente di A (con la chiave publishable, NON con
+   service_role).
+3. Per OGNI tabella dello schema public, tenta:
+   - una select di tutte le righe → deve restituire solo quelle di A
+   - una select per ID diretto di un record di B → deve restituire 0 righe
+   - un insert con organizzazione_id di B → deve fallire
+   - un update e un delete su un record di B → devono fallire
+4. Il test fallisce se anche UNA sola di queste operazioni riesce.</pre>
+<p><strong>Questo test è la cosa più importante che scriverai nel progetto.</strong> Va eseguito in CI, a ogni modifica dello schema, per sempre. Ed è il motivo per cui potrai dormire mentre un agente genera migrazioni.</p>
+<h3><span class="n">6.</span>Le altre cinque insidie</h3>
+<p><strong>Storage.</strong> [FATTO, docs] I bucket sono privati per default, e le policy sono le stesse RLS applicate a <code>storage.objects</code>. <strong>Un bucket &quot;pubblico&quot; serve qualunque file a chiunque abbia l&#x27;URL</strong> — e i percorsi dei file spesso contengono l&#x27;ID del tenant, il che rende gli URL indovinabili. Pubblico solo per ciò che è davvero destinato al web aperto.</p>
+<p><strong>Viste.</strong> [FATTO, docs] Le viste, per default in Postgres, <strong>bypassano le RLS</strong> delle tabelle sottostanti (sono create come <code>security definer</code>). Da Postgres 15 si può imporre il rispetto delle policy con <code>security_invoker = true</code>. <strong>Una vista dimenticata è una porta sul retro.</strong></p>
+<p><strong>Migrazioni generate da agenti.</strong> Ogni <code>CREATE TABLE</code> generato è una tabella potenzialmente senza RLS. <strong>Regola per il file di istruzioni del progetto</strong> (→ A4):</p>
+<pre class="cod">Ogni migrazione che crea una tabella in `public` DEVE, nello stesso file:
+1. abilitare RLS: alter table X enable row level security;
+2. definire le policy per select/insert/update/delete, con `to authenticated`;
+3. creare l&#x27;indice sulla colonna del tenant.
+Una migrazione che crea una tabella senza questi tre elementi è incompleta:
+non proporla.</pre>
+<p>Questa è la regola più preziosa che scriverai in <code>CLAUDE.md</code>.</p>
+<p><strong>Edge Functions.</strong> Girano sul server e hanno accesso ai segreti, <code>service_role</code> incluso. <strong>Trattale come servizi privilegiati:</strong> non stampare l&#x27;ambiente nei log, non restituire dettagli interni negli errori, e verifica sempre il JWT del chiamante.</p>
+<p><strong><code>update</code> senza <code>select</code>.</strong> [FATTO, docs] Una policy di UPDATE <strong>richiede anche una policy di SELECT</strong> per funzionare: Postgres deve leggere la riga prima di modificarla. È un inciampo classico che fa sembrare rotto ciò che è solo incompleto.</p>
+<h3><span class="n">7.</span>Cosa Supabase ti dà, e che dovresti usare</h3>
+<ul><li><strong>Postgres vero.</strong> Il che significa (→ A6): <strong>i tuoi dati sono portabili.</strong> È la ragione strategica più forte per stare su Supabase invece che su un database proprietario: se un giorno te ne vai, i dati sono uno standard, non un ostaggio.</li><li><strong>Vincoli e transazioni</strong> (→ A7): usali. Chiavi esterne, unicità, <code>check</code>. Ogni vincolo è una classe di bug che l&#x27;agente non potrà introdurre.</li><li><strong>Migrazioni versionate</strong>: nel repo, in ordine, applicate in CI. Mai modifiche a mano dalla dashboard in produzione (→ A5).</li><li><strong><code>EXPLAIN ANALYZE</code></strong>: incolla l&#x27;output a un modello quando una query è lenta. Lì i dati ci sono, e la diagnosi è affidabile (→ A11).</li></ul>
+<h3>Checklist Supabase</h3>
+<pre class="cod">□ Security Advisor eseguito, zero segnalazioni
+□ Nessuna tabella in `public` con rowsecurity = false
+□ Ogni tabella ha policy per select/insert/update/delete, con `to authenticated`
+□ Le funzioni di supporto sono security definer, fuori dallo schema esposto,
+  con search_path = &#x27;&#x27;
+□ service_role NON compare in nessuna variabile NEXT_PUBLIC_*, nel bundle,
+  nei log, nel repository
+□ Test di isolamento fra tenant in CI, verde
+□ Indice sulla colonna del tenant
+□ auth.uid() avvolto in (select ...) nelle policy
+□ Bucket privati salvo eccezione motivata
+□ Viste: security_invoker = true, oppure verificate una a una
+□ Le migrazioni vivono nel repo, non nella dashboard</pre>
+<h3>Errori tipici</h3>
+<ol><li><strong>Creare tabelle via SQL o via agente e dimenticare RLS.</strong> La causa numero uno, e vale la pena ripeterla tre volte.</li><li><strong>Credere che la chiave publishable sia un segreto.</strong> Non lo è, e non deve esserlo.</li><li><strong><code>service_role</code> nel client</strong> — spesso attraverso una variabile <code>NEXT_PUBLIC_*</code> messa lì da un agente per far funzionare qualcosa in fretta.</li><li><strong>Policy con sotto-query non avvolte</strong>, che rendono il sistema lento e la sicurezza un capro espiatorio.</li><li><strong>Fidarsi delle RLS per le prestazioni:</strong> filtra anche esplicitamente.</li><li><strong>Viste e bucket dimenticati.</strong> Le porte sul retro sono sempre quelle che non guardi.</li></ol>
+<p class="changelog">v1.0 — focus di stack; fatti verificati su supabase.com/docs il 13/07/2026.</p></article><article id="a19"><div class="mod-head"><span class="mod-code">A19</span><div><h2>Focus: Vercel, dal punto di vista dell&#x27;architetto</h2><p class="mod-meta">Corso 3 · Parte F · Focus di stack · v1.0</p></div></div><p><em>Fonti verificate il 13/07/2026: vercel.com/docs (deployment protection, environment variables, functions).</em></p>
+<p>Vercel è <strong>una macchina che trasforma un commit in un sito online</strong>, con una rete di distribuzione davanti e delle funzioni che girano su richiesta. Il valore è reale: elimina un&#x27;intera categoria di lavoro (server, deploy, certificati, scalabilità). <strong>Il prezzo è che alcune decisioni importanti vengono prese per te, e altre — le più pericolose — restano tue senza che tu te ne accorga.</strong></p>
+<h3><span class="n">1.</span>Il modello mentale</h3>
+<pre class="cod">git push  ──►  build  ──►  deploy immutabile  ──►  URL
+                                 │
+      ┌──────────────────────────┼──────────────────────────┐
+   PRODUZIONE                 PREVIEW                    LOCALE
+   (branch main)         (ogni altro branch/PR)         (vercel dev)</pre>
+<p><strong>Tre proprietà da capire subito:</strong></p>
+<ol><li><strong>Ogni deploy è immutabile e ha il suo URL.</strong> Non &quot;aggiorni&quot; il sito: ne pubblichi uno nuovo e l&#x27;indirizzo di produzione punta a quello. <strong>Conseguenza magnifica: il ritorno indietro è istantaneo</strong> (si ripunta al deploy precedente). È la reversibilità di A5, regalata.</li></ol>
+<ol><li><strong>Ogni branch ottiene un ambiente di preview vero e proprio</strong>, con il suo URL. È lo strumento di feedback più potente che hai (→ A14 §2.5): mandi un link, la persona guarda, ti dice cosa non va. Ma vedi §3: <strong>quel link, per default, potrebbe essere aperto a chiunque.</strong></li></ol>
+<ol><li><strong>Il codice gira in due posti diversi</strong>, e confonderli è la fonte di metà degli errori: <strong>sul server</strong> (le funzioni, che possono usare i segreti) e <strong>nel browser</strong> (il codice che chiunque può leggere).</li></ol>
+<h3><span class="n">2.</span>La distinzione che devi tatuarti: server o browser?</h3>
+<p><strong>È il confine più importante di tutto lo stack</strong>, e l&#x27;errore che genera è sempre lo stesso e sempre grave.</p>
+<table><thead><tr><th></th><th>Gira sul <strong>server</strong></th><th>Gira nel <strong>browser</strong></th></tr></thead><tbody><tr><td>Chi lo vede</td><td>Nessuno</td><td><strong>Tutti.</strong> È testo, si legge con due clic</td></tr><tr><td>Può usare segreti?</td><td><strong>Sì</strong></td><td><strong>Mai</strong></td></tr><tr><td>Variabile d&#x27;ambiente</td><td><code>DATABASE_URL</code>, <code>SUPABASE_SERVICE_ROLE_KEY</code></td><td>Solo <code>NEXT_PUBLIC_*</code></td></tr></tbody></table>
+<div class="regola"><strong>[FATTO] Il prefisso <code>NEXT_PUBLIC_</code> (o <code>PUBLIC_</code>, secondo il framework) significa letteralmente: &quot;metti questo valore nel bundle che scarica ogni visitatore&quot;.</strong></div>
+<p>Da qui <strong>l&#x27;errore più comune e più costoso dell&#x27;intero stack Vercel+Supabase</strong>: qualcosa non funziona nel browser, la variabile risulta <code>undefined</code>, l&#x27;agente (o tu, di fretta) aggiunge il prefisso <code>NEXT_PUBLIC_</code> per farla funzionare — <strong>e se quella variabile era la chiave <code>service_role</code>, hai appena pubblicato l&#x27;accesso root al database a ogni visitatore.</strong> Il sito funziona benissimo. È il momento peggiore possibile per un successo apparente.</p>
+<p><strong>La regola per il file di istruzioni del progetto</strong> (→ A4):</p>
+<pre class="cod">MAI aggiungere il prefisso NEXT_PUBLIC_ a una variabile per &quot;farla
+funzionare&quot;. Se una variabile non è disponibile nel browser, il codice che
+la usa sta girando nel posto sbagliato: spostalo sul server.
+Le sole variabili NEXT_PUBLIC_ ammesse in questo progetto sono: [elenco].
+Aggiungerne una richiede la mia approvazione esplicita.</pre>
+<p><strong>Il controllo che devi fare a ogni rilascio:</strong> cerca la chiave segreta nel bundle pubblicato. Se la trovi, revoca e rigenera <strong>prima</strong> di qualunque altra cosa (→ A5 §4).</p>
+<h3><span class="n">3.</span>Preview: la comodità che diventa una fuga</h3>
+<p>[FATTO, docs] Le preview sono URL reali, raggiungibili. Vercel offre la <strong>Deployment Protection</strong> (protezione con autenticazione Vercel o con password, secondo il piano) — <strong>ma va attivata e verificata.</strong></p>
+<p>Le due insidie:</p>
+<p><strong>a) Preview aperte con dati veri.</strong> Il caso classico: la preview punta al database di produzione &quot;per comodità di test&quot;. Ora esiste un URL non indicizzato ma pubblico che espone i dati veri, e sopravvive per sempre nella cronologia dei deploy. <strong>La regola:</strong> le preview usano un database di prova, o sono protette. Mai la coppia &quot;aperta + dati veri&quot;.</p>
+<p><strong>b) Segreti diversi per ambiente.</strong> [FATTO, docs] Le variabili si impostano per ambiente (production / preview / development) e si possono legare a un branch specifico. <strong>Usa questa separazione</strong>: la preview non deve poter toccare la produzione (→ A5 §2). Se il token di preview ha i permessi di produzione, la separazione degli ambienti è teatro.</p>
+<p><strong>c) L&#x27;accesso automatico</strong> (test, agenti, CI) su deploy protetti si fa con il <em>bypass secret</em> (<code>VERCEL_AUTOMATION_BYPASS_SECRET</code>), non abbassando la protezione. Proteggere e poi disattivare la protezione &quot;perché i test non passano&quot; è il modo in cui le buone intenzioni diventano incidenti.</p>
+<h3><span class="n">4.</span>Le funzioni: dove gira il tuo codice, e cosa costa</h3>
+<p>Il modello serverless ha proprietà che cambiano l&#x27;architettura, e vanno conosciute prima, non scoperte in bolletta.</p>
+<p><strong>1 · Le funzioni sono senza stato e senza memoria.</strong> Non puoi tenere qualcosa &quot;in memoria tra una richiesta e l&#x27;altra&quot;: ogni invocazione può girare su una macchina diversa. Lo stato <strong>vive nel database, sempre</strong>. È un vincolo salutare (→ A2), ma va compreso: la cache in una variabile globale, che nell&#x27;ambiente locale funziona benissimo, in produzione produce risultati incoerenti — e questo è <strong>esattamente</strong> il tipo di bug &quot;funziona in locale, non in produzione&quot; di A10.</p>
+<p><strong>2 · Le funzioni hanno un tempo massimo.</strong> Un&#x27;operazione lunga (importare 5.000 soci, generare 400 PDF, inviare 400 email) <strong>verrà interrotta a metà</strong>. La conseguenza è pesante e non teorica: se l&#x27;operazione non è idempotente (→ A2), l&#x27;utente riprova e <strong>duplica</strong>.</p>
+<p><strong>Le operazioni lunghe vanno spezzate o messe in coda</strong> — e sono idempotenti. Questa è una decisione di architettura, non un dettaglio di implementazione, e va presa nella specifica.</p>
+<p><strong>3 · Il cold start.</strong> Una funzione che non gira da un po&#x27; impiega di più alla prima chiamata. Su un uso a picchi — un congresso, un&#x27;apertura iscrizioni — significa che i <strong>primi</strong> utenti hanno l&#x27;esperienza peggiore, ed è vero il contrario di ciò che il buon senso suggerisce.</p>
+<p><strong>4 · Il costo cresce con l&#x27;uso, e con la durata.</strong> È il modello a consumo di A15 §5, applicato al calcolo. <strong>La domanda da fare prima:</strong> <em>cosa succede alla bolletta se una funzione va in loop, o se qualcuno la chiama diecimila volte?</em> Esistono limiti di spesa: <strong>impostali il primo giorno</strong>, non dopo la prima brutta sorpresa. Ed è il tipo di sorpresa che arriva in un fine settimana.</p>
+<h3><span class="n">5.</span>Il vantaggio strategico da sfruttare davvero</h3>
+<p>Vercel ti regala tre cose che, in A5 e A12, ho descritto come faticose da costruire:</p>
+<table><thead><tr><th>Proprietà</th><th>Cosa ti dà</th></tr></thead><tbody><tr><td><strong>Deploy atomico e immutabile</strong></td><td>Il ritorno indietro istantaneo. <strong>Usalo:</strong> al primo segnale di guaio in produzione, si torna indietro <em>e poi</em> si indaga (→ A12 §5)</td></tr><tr><td><strong>Preview per ogni branch</strong></td><td>Il feedback vero, su qualcosa che si tocca (→ A14). È la leva più sottovalutata: <strong>mostra, non descrivere</strong></td></tr><tr><td><strong>Rilasci piccoli e frequenti, gratis</strong></td><td>Il risultato DORA (→ A12 §3): il pattern più sicuro è anche quello che la piattaforma rende più facile</td></tr></tbody></table>
+<p><strong>Il consiglio operativo:</strong> il fatto che rilasciare costi zero <strong>non è un invito a rilasciare senza controlli</strong> — è un invito a rilasciare <strong>pezzi piccoli</strong>, ognuno verificato. La differenza tra usare bene e usare male questa piattaforma sta tutta qui: chi non ha disciplina, con Vercel, sbaglia semplicemente più in fretta.</p>
+<h3><span class="n">6.</span>Il lock-in, valutato onestamente</h3>
+<p><strong>Quanto sei legato?</strong> Dipende quasi interamente da te:</p>
+<ul><li>Se usi solo build e hosting: <strong>te ne vai in un giorno.</strong> Il lock-in è basso, e Vercel è un&#x27;ottima scelta.</li><li>Se usi le loro funzioni, il loro storage, la loro cache, il loro middleware: <strong>te ne vai in un mese.</strong></li><li>Se la logica di dominio è intrecciata alle loro API: <strong>non te ne vai</strong> (→ A6 §4).</li></ul>
+<p><strong>La contromisura è quella nota:</strong> la logica di dominio non deve sapere dove gira. Un modulo che parla con la piattaforma; il resto del sistema, no. Costa poco all&#x27;inizio e vale moltissimo il giorno in cui i prezzi cambiano — o il giorno in cui un cliente istituzionale ti chiede dove vivono fisicamente i suoi dati, e la risposta deve essere una tua scelta, non una conseguenza.</p>
+<h3>Checklist Vercel</h3>
+<pre class="cod">□ Nessun segreto in una variabile NEXT_PUBLIC_* — verificato cercandolo
+  nel bundle pubblicato
+□ Variabili separate per production / preview / development
+□ Le preview NON puntano al database di produzione (o sono protette)
+□ Deployment Protection attiva sulle preview, se i dati non sono finti
+□ Limiti di spesa impostati
+□ Nessuna operazione lunga dentro una funzione: spezzata o in coda
+□ Ogni operazione ripetibile è idempotente
+□ Il ritorno indietro è stato provato almeno una volta, non solo letto
+□ La logica di dominio non dipende dalle API della piattaforma</pre>
+<h3>Errori tipici</h3>
+<ol><li><strong><code>NEXT_PUBLIC_</code> aggiunto &quot;per far funzionare la cosa&quot;.</strong> È il modo in cui i segreti finiscono online, ed è quasi sempre un agente che lo propone e un umano di fretta che accetta.</li><li><strong>Preview aperte sui dati di produzione.</strong></li><li><strong>Stessi segreti in tutti gli ambienti</strong>, che vanifica la separazione.</li><li><strong>Operazioni lunghe dentro una funzione</strong>, con timeout e duplicati.</li><li><strong>Nessun limite di spesa.</strong> Il modello a consumo non perdona i loop.</li><li><strong>Confondere &quot;il deploy è facile&quot; con &quot;il rilascio è sicuro&quot;.</strong> La piattaforma ti dà la reversibilità; la disciplina la devi mettere tu.</li></ol>
+<p class="changelog">v1.0 — focus di stack; fatti verificati su vercel.com/docs il 13/07/2026.</p></article>
 </main></div>
 <footer class="page">Percorso formativo Claude per B Best e HERA · Corso 3 · riservato</footer>
 <script>
