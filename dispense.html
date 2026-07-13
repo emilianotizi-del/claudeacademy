@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dispense — Claude per B Best e HERA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.foglio{border-top:3px solid var(--navy);margin-top:2.8rem;padding-top:1rem}
+.foglio h3{font-size:1.35rem}
+.printbar{background:var(--card);border-radius:12px;padding:1rem 1.2rem;font-family:var(--disp);font-size:.9rem;margin-top:1rem}
+@media print{
+  .side,.topbar,.scrim,.printbar,footer.page{display:none!important}
+  .wrap{display:block}
+  main{max-width:none;padding:0}
+  .foglio{page-break-before:always;border-top:none;margin-top:0}
+  .foglio:first-of-type{page-break-before:avoid}
+  .hero{display:none}
+  a.rimando{border:none}
+}
+.q{margin-top:1rem;max-width:70ch}
+.q p{margin-top:.7rem}
+.linee{color:#B9BEE6}
+</style></head><body>
+<header class="topbar"><span class="tiles" aria-hidden="true"><i></i><i></i><i></i><i></i></span><strong>Dispense</strong>
+<button class="burger" id="burger" aria-label="Apri il menu" aria-controls="side" aria-expanded="false"><span></span></button></header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="wrap">
+<aside class="side" id="side">
+  <img src="logo.png" alt="Hera Foundation">
+  <p class="kicker">Percorso formativo AI</p>
+  <h1>Claude per B&nbsp;Best e HERA</h1>
+  <p class="vers">Materiali partecipanti · stampabili</p>
+  <p class="kicker">Navigazione</p>
+  <ul>
+    <li><a href="index.html"><span class="code">MAN</span>Manuale (F1–F6)</a></li>
+    <li><a  href="aula.html"><span class="code">KIT</span>Kit d’aula e note docente</a></li>
+    <li><a class="attivo" href="dispense.html"><span class="code">DSP</span>Dispense stampabili</a></li>
+  </ul>
+  
+</aside>
+<main>
+
+<div class="hero"><p class="eyebrow"><span class="tiles"><i></i><i></i><i></i><i></i></span>Dispense partecipanti</p>
+<h2>Corso Claude — materiali per l’aula</h2>
+<p class="uso">Versioni per i partecipanti, <strong>senza chiavi né soluzioni</strong>. Per stampare: Ctrl+P / ⌘P — ogni foglio inizia su una pagina nuova; sidebar e web-chrome si nascondono da soli.</p>
+<div class="printbar">Contenuto: 1 · Questionario pre-corso &nbsp;·&nbsp; 2 · Esercizio «Il verbale» &nbsp;·&nbsp; 3 · Esercizio «Il programma» &nbsp;·&nbsp; 4 · Tracce del laboratorio &nbsp;·&nbsp; 5 · Compito finale</div></div>
+
+<article class="foglio"><h3>1 · Questionario pre-corso <span style="font-weight:400;color:var(--muted)">(10 minuti — entro il 18/07)</span></h3>
+<p>Le risposte servono solo a calibrare esempi ed esercizi del corso del 22–23 luglio.</p>
+<div class="q"><p><strong>1.</strong> Qual è il tuo ruolo e quali 2–3 attività occupano più tempo nella tua settimana?</p>
+<p><strong>2.</strong> Hai mai usato ChatGPT, Claude o simili? &nbsp;☐ Mai &nbsp;☐ Provato per curiosità &nbsp;☐ Ogni tanto per lavoro &nbsp;☐ Spesso. Se sì: per fare cosa?</p>
+<p><strong>3.</strong> Descrivi UN compito ripetitivo o noioso che vorresti delegare o velocizzare (più è concreto, meglio è).</p>
+<p><strong>4.</strong> Qual è il documento più ostico con cui lavori di solito?</p>
+<p><strong>5.</strong> C’è qualcosa che ti preoccupa dell’usare l’AI al lavoro?</p></div></article>
+
+<article class="foglio"><h3>2 · Esercizio «Il verbale» <span style="font-weight:400;color:var(--muted)">(blocco 1.3 — 50′)</span></h3>
+<p>Materiale: il resoconto della riunione di programmazione (distribuito in aula).</p>
+<p><strong>Fase A (15′).</strong> Incolla il resoconto e usa il template:</p>
+<div class="prompt"><span class="lab">Prompt di partenza</span><p>Ti incollo il resoconto della riunione di programmazione dell’evento. Sintetizzalo in: 1) decisioni prese, 2) azioni con responsabile e scadenza, 3) punti rinviati o aperti. Massimo mezza pagina, elenchi puntati, italiano.</p></div>
+<p><strong>Fase B (15′).</strong> Due correzioni mirate obbligatorie, senza riscrivere la richiesta: una di <em>formato</em> (es. azioni in tabella: azione / responsabile / scadenza / stato) e una di <em>contenuto</em> (es. «le azioni senza scadenza non ometterle: segna [DA DEFINIRE]»).</p>
+<p><strong>Fase C (10′).</strong> Una critica con checklist:</p>
+<div class="prompt"><span class="lab">La critica</span><p>Rileggi il resoconto originale e verifica la sintesi: (a) decisioni presenti nel testo ma assenti nella sintesi; (b) azioni attribuite alla persona sbagliata; (c) informazioni nella sintesi che NON sono nel resoconto.</p></div></article>
+
+<article class="foglio"><h3>3 · Esercizio «Il programma» <span style="font-weight:400;color:var(--muted)">(blocco 1.4 — 60′)</span></h3>
+<p>Materiale: il programma «versione esercizio» (distribuito in aula). Contiene alcune incongruenze inserite ad arte — e Claude potrebbe segnalarne anche di false.</p>
+<div class="prompt"><span class="lab">Prompt di partenza</span><p>Ti incollo il programma preliminare di un congresso. 1) Estrai la griglia: giorno, orario, sessione, relatori, moderatori. 2) Segnala ogni incongruenza: sovrapposizioni di orario, relatori o moderatori impegnati in due punti contemporaneamente, buchi o salti negli orari, nomi scritti in modo difforme, date incoerenti. 3) Per ogni segnalazione indica il punto esatto del testo.</p></div>
+<p><strong>Poi:</strong> verifica UNA per UNA le segnalazioni sul documento. Vince chi consegna l’elenco più accurato: errori veri trovati, meno i falsi allarmi accettati senza controllo.</p></article>
+
+<article class="foglio"><h3>4 · Tracce del laboratorio <span style="font-weight:400;color:var(--muted)">(blocco 2.3 — 75′)</span></h3>
+<p>Regola per tutti: briefing con i cinque elementi → due iterazioni → una critica → verifica.</p>
+<p><strong>Eventi.</strong> Mail a un fornitore di allestimenti: preventivo per la vela e il desk di Romanestesia 2026, sopralluogo possibile, risposta entro venerdì.</p>
+<p><strong>Segreteria scientifica.</strong> Dall’abstract distribuito in aula, tre bozze di domanda per il quiz ECM:</p>
+<div class="prompt"><span class="lab">Prompt di partenza</span><p>Sei l’assistente della segreteria scientifica di un provider ECM. Ti incollo un abstract. Prepara TRE bozze di domanda a risposta multipla: 4 opzioni, una sola corretta, distrattori plausibili ma inequivocabilmente errati rispetto al testo. Per ogni domanda indica la risposta corretta e il passaggio che la giustifica. Verifica la comprensione, non la memoria di dettagli numerici irrilevanti. In testa a ogni bozza scrivi: «BOZZA — da validare dal responsabile scientifico».</p></div>
+<p><strong>Comunicazione.</strong> Annuncio di apertura iscrizioni in due versioni: LinkedIn e newsletter.</p>
+<p><strong>Amministrazione.</strong> Promemoria cortese a uno sponsor per il pagamento della fattura di sponsorizzazione, con campi [FATTURA] e [SCADENZA].</p></article>
+
+<article class="foglio"><h3>5 · Compito finale <span style="font-weight:400;color:var(--muted)">(entro 2 settimane dal corso)</span></h3>
+<p>Applica Claude a un <strong>processo reale del tuo ruolo</strong> e deposita nella libreria del Project: <strong>1 template funzionante</strong> + <strong>3 righe</strong> su cosa hai imparato.</p>
+<p>Criteri con cui verrà letto il lavoro: il briefing contiene i cinque elementi? · c’è traccia di almeno un’iterazione? · la verifica è stata fatta (nomi, date, numeri)? · il template è riusabile da un collega senza spiegazioni?</p></article>
+</main></div>
+<footer class="page">Percorso formativo Claude per B Best e HERA · materiale interno riservato</footer>
+<script>
+const side=document.getElementById('side'),burger=document.getElementById('burger'),scrim=document.getElementById('scrim');
+function setMenu(o){side.classList.toggle('open',o);scrim.hidden=!o;scrim.classList.toggle('show',o);burger.setAttribute('aria-expanded',String(o));}
+if(burger){burger.addEventListener('click',()=>setMenu(!side.classList.contains('open')));scrim.addEventListener('click',()=>setMenu(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});}
+</script></body></html>
