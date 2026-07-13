@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuale operativo — Claude per B Best e HERA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>.mod-meta a{color:var(--peri)}</style></head><body>
+<header class="topbar"><span class="tiles" aria-hidden="true"><i></i><i></i><i></i><i></i></span><strong>Manuale operativo</strong>
+<button class="burger" id="burger" aria-label="Apri il menu" aria-controls="side" aria-expanded="false"><span></span></button></header>
+<div class="scrim" id="scrim" hidden></div>
+<div class="wrap">
+<aside class="side" id="side">
+  <img src="logo.png" alt="Hera Foundation">
+  <p class="kicker">Percorso formativo AI</p>
+  <h1>Claude per B Best e HERA</h1>
+  <p class="vers">Manuale operativo · Parti I–II · M1–M6</p>
+  <p class="kicker">Navigazione</p>
+  <ul>
+    <li><a href="index.html"><span class="code">MAN</span>Manuale (F1–F6)</a></li>
+    <li><a href="aula.html"><span class="code">KIT</span>Kit d’aula e note docente</a></li>
+    <li><a href="dispense.html"><span class="code">DSP</span>Dispense stampabili</a></li>
+  </ul>
+  <p class="kicker">Parte I · Capire Claude</p>
+  <ul>
+    <li><a href="#m1"><span class="code">M1</span>Capire Claude · approfondimenti</a></li>
+    <li><a href="#m2"><span class="code">M2</span>L’arte della richiesta</a></li>
+    <li><a href="#m3"><span class="code">M3</span>Conversare e verificare</a></li>
+  </ul>
+  <p class="kicker">Parte II · Organizzare il lavoro</p>
+  <ul>
+    <li><a href="#m4"><span class="code">M4</span>Contesto e memoria</a></li>
+    <li><a href="#m5"><span class="code">M5</span>I Projects · capitolo operativo</a></li>
+    <li><a href="#m6"><span class="code">M6</span>Collaborare e la libreria</a></li>
+  </ul>
+</aside>
+<main>
+<div class="hero"><p class="eyebrow"><span class="tiles"><i></i><i></i><i></i><i></i></span>Manuale operativo · Parti I–II</p>
+<h2>Gli approfondimenti oltre le Fondamenta</h2>
+<p class="uso">M1–M4 <strong>estendono</strong> i moduli F1–F4 (che restano il testo base, nel <a href="index.html">manuale</a>): qui trovi solo ciò che là non c’è — FAQ, prompt annotati, registri di frasi, cicli di vita. M5 e M6 sono capitoli nuovi: i Projects in dettaglio e la libreria come processo di squadra.</p></div>
+<article id="m1"><div class="mod-head"><span class="mod-code">M1</span><div><h2>Capire Claude: approfondimenti</h2><p class="mod-meta">v0.1 · 13/07/2026 · estende <a href="index.html#f1">F1</a></p></div></div>
+<section><h3><span class="n">§1</span>Le domande che farà il team (FAQ)</h3>
+<p><strong>«Claude impara dalle cose che gli scrivo?»</strong> Sul piano aziendale (Team/Enterprise), input e output non addestrano i modelli per impostazione predefinita <span class="badge b-fatto">FATTO</span> (<a class="rimando" href="index.html#f6">→ F6 §5</a>). Ma «non addestra» non significa «carico qualsiasi cosa»: vale il semaforo.</p>
+<p><strong>«Perché la stessa domanda dà risposte diverse?»</strong> È costitutivo: Claude genera, non recupera. Per risultati riproducibili la leva è il template con formato e vincoli espliciti.</p>
+<p><strong>«Le traduzioni sono affidabili?»</strong> Molto buone come <em>bozza professionale</em>, soprattutto IT↔EN. La terminologia specialistica (farmaci, dispositivi, ECM) e i nomi propri si ricontrollano; per i testi ufficiali, rilettura umana sempre.</p>
+<p><strong>«Sa le cose recenti?»</strong> La conoscenza ha una data; per il recente può cercare sul web, e ciò che trova è una fonte da aprire e verificare (<a class="rimando" href="index.html#f3">→ F3 §5</a>).</p>
+<p><strong>«Perché a volte è prolisso?»</strong> Perché non gli avete detto quanto dev’essere lungo. «Massimo 120 parole» è un vincolo, non una scortesia.</p>
+<p><strong>«È meglio Claude o ChatGPT?»</strong> Strumenti della stessa famiglia, con differenze di dettaglio che cambiano nel tempo; il percorso usa Claude perché è il piano aziendale attivo. Tutto ciò che imparate — briefing, iterazione, verifica — vale per l’intera categoria.</p></section>
+<section><h3><span class="n">§2</span>Dove aiuta, ruolo per ruolo</h3>
+<table><thead><tr><th>Ruolo</th><th>Alto valore da subito</th><th>Con esperienza</th></tr></thead><tbody>
+<tr><td><strong>Eventi</strong></td><td>Mail a fornitori e faculty, checklist logistiche, confronto preventivi</td><td>Timeline evento, gestione imprevisti</td></tr>
+<tr><td><strong>Amministrazione</strong></td><td>Solleciti, promemoria, testi per Fattureincloud</td><td>Prime bozze di procedure (→ M13)</td></tr>
+<tr><td><strong>Segreteria scientifica</strong></td><td>Bozze quiz ECM (con validazione), sintesi paper, controllo programmi</td><td>Griglie valutazione abstract, corrispondenza EN</td></tr>
+<tr><td><strong>Comunicazione</strong></td><td>Post e newsletter in più versioni, comunicati</td><td>Piani editoriali, riuso tra canali</td></tr></tbody></table></section>
+<section><h3><span class="n">§3</span>Tre miti da sfatare</h3>
+<ol><li><strong>«L’AI ti ruba il lavoro»</strong> → qui sposta il tempo dalle bozze alla cura: relazioni con faculty e sponsor, qualità scientifica, decisioni.</li>
+<li><strong>«Servono i prompt magici»</strong> → serve saper fare un briefing: una competenza da segreteria organizzativa che avete già.</li>
+<li><strong>«O ti fidi o non lo usi»</strong> → falsa alternativa: lo usi <em>e</em> verifichi, in modo proporzionato al danno.</li></ol></section>
+<p class="changelog">Changelog — v0.1: prima stesura.</p></article>
+<article id="m2"><div class="mod-head"><span class="mod-code">M2</span><div><h2>L’arte della richiesta: prompt annotati e pattern</h2><p class="mod-meta">v0.1 · 13/07/2026 · estende <a href="index.html#f2">F2</a></p></div></div>
+<section><h3><span class="n">§1</span>Tre coppie annotate (cattivo → buono)</h3>
+<h4>A · La mail alla faculty</h4>
+<div class="prompt nudo"><span class="lab">❌</span><p>Scrivi una mail al professore per il congresso</p><p class="esito">quale professore? quale congresso? per dirgli cosa? — tre buchi in nove parole</p></div>
+<p>✅ Il prompt della demo d’aula (kit, blocco 1.1): destinataria identificata, tema, scadenza, logistica, tono, lingua, lunghezza, firma. <strong>Il dettaglio che fa la differenza:</strong> «relatrice apprezzata alla scorsa edizione» — una riga di relazione che cambia il calore della mail.</p>
+<h4>B · Il preventivo al fornitore</h4>
+<div class="prompt nudo"><span class="lab">❌</span><p>Chiedi un preventivo per il congresso</p></div>
+<div class="prompt"><span class="lab">✅</span><p>Scrivi a [FORNITORE] per un preventivo: vela esterna 3×1 m e desk reception per Romanestesia 2026 (Auditorium Antonianum, Roma, 11–12 dicembre; montaggio il 10 pomeriggio). Chiedi: costo, tempi di produzione, formato file grafico richiesto, possibilità di sopralluogo. Risposta entro venerdì. Tono professionale asciutto.</p><p class="esito">le domande esplicite trasformano la richiesta in una checklist evadibile in una risposta sola</p></div>
+<h4>C · Il post social</h4>
+<div class="prompt nudo"><span class="lab">❌</span><p>Scrivi un post sull’apertura delle iscrizioni</p></div>
+<div class="prompt"><span class="lab">✅</span><p>Post LinkedIn per l’apertura iscrizioni di Romanestesia 2026 (11–12 dicembre, Roma). Pubblico: anestesisti e rianimatori. Leva: quota early per le prime 100 iscrizioni. Includi: date, sede, link [LINK]. Tono professionale con un tocco di orgoglio per la XXII edizione. 3 versioni: sobria, energica, istituzionale. Massimo 3 hashtag.</p><p class="esito">pubblico + leva + varianti = si sceglie invece di descrivere</p></div></section>
+<section><h3><span class="n">§2</span>Pattern oltre i cinque elementi</h3>
+<ul><li><strong>A scaletta:</strong> «prima proponi la struttura in punti; quando la approvo, scrivi il testo» — sui documenti lunghi evita di buttare via pagine intere.</li>
+<li><strong>L’esempio negativo:</strong> allegare anche una mail «come NON piace a noi», e dire perché.</li>
+<li><strong>Il doppio registro:</strong> «stesso contenuto in due versioni: per la faculty (formale) e per il gruppo interno (schietta)».</li>
+<li><strong>La domanda di riserva:</strong> chiudere con «se qualcosa è ambiguo, chiedi invece di assumere» — l’assunzione silenziosa è la madre delle bozze sbagliate.</li></ul></section>
+<section><h3><span class="n">§3</span>Scrivere template robusti (per la libreria)</h3>
+<ol><li>I campi si scrivono <code>[NOME CAMPO: cosa metterci]</code> — chi compila non deve indovinare.</li>
+<li>Ogni template porta in coda un <strong>esempio di output riuscito</strong>: taratura immediata.</li>
+<li>Un template = un compito: «sollecito deliverable», non «mail sponsor».</li>
+<li>Versione e owner in testa: i template invecchiano (→ M6).</li></ol></section>
+<p class="changelog">Changelog — v0.1: prima stesura; coppie annotate su casi DATI-01/kit d’aula.</p></article>
+<article id="m3"><div class="mod-head"><span class="mod-code">M3</span><div><h2>Conversare e verificare: il registro completo</h2><p class="mod-meta">v0.1 · 13/07/2026 · estende <a href="index.html#f3">F3</a></p></div></div>
+<section><h3><span class="n">§1</span>Il registro delle correzioni, per categoria</h3>
+<table><thead><tr><th>Vuoi…</th><th>Frase tipo</th></tr></thead><tbody>
+<tr><td>Accorciare</td><td>«Taglia del 30% senza perdere le informazioni operative»</td></tr>
+<tr><td>Cambiare tono</td><td>«Più caloroso nel primo paragrafo; il resto va bene»</td></tr>
+<tr><td>Cambiare struttura</td><td>«Stesso contenuto: prima le date, poi la logistica, in tabella»</td></tr>
+<tr><td>Salvare il salvabile</td><td>«Tieni introduzione e chiusura; rifai solo la parte centrale»</td></tr>
+<tr><td>Sbloccare</td><td>«Dammi tre direzioni diverse solo per l’attacco»</td></tr>
+<tr><td>Capire</td><td>«Prima di cambiare: perché hai scelto questo ordine?»</td></tr>
+<tr><td>Tornare indietro</td><td>«La versione di due messaggi fa era migliore: riparti da quella»</td></tr>
+<tr><td><strong>Consolidare</strong></td><td>«Riscrivi la versione finale pulita, incorporando tutte le correzioni»</td></tr></tbody></table>
+<p>L’ultima è preziosa a fine sessione: la <strong>versione consolidata</strong> è quella da depositare nella conoscenza del Project o in libreria (→ M6).</p></section>
+<section><h3><span class="n">§2</span>Un’iterazione annotata: la risposta allo sponsor</h3>
+<p><em>Contesto: [SPONSOR] chiede di ampliare lo spazio espositivo oltre il pacchetto.</em></p>
+<ol><li><strong>Bozza</strong> con la posizione aziendale («disponibili a valutare, a fronte di integrazione; regole di allestimento non negoziabili»).</li>
+<li><strong>Correzione di tono:</strong> «troppo rigida: apri riconoscendo il valore della partnership, poi i vincoli» — <em>l’ordine emotivo conta quanto il contenuto</em>.</li>
+<li><strong>Correzione di contenuto:</strong> «non citare cifre: rimanda a una call» — il prompt aveva lasciato spazio a un’assunzione; la correzione la ritira.</li>
+<li><strong>Critica:</strong> «rileggi come il commerciale dello sponsor: dove diresti no?» → emerge una frase da ultimatum; si smussa.</li>
+<li><strong>Verifica</strong> su prospectus e contratto; firma umana.</li></ol></section>
+<section><h3><span class="n">§3</span>Dove si verifica cosa (tabella aziendale)</h3>
+<table><thead><tr><th>Tipo di dato</th><th>Fonte di verità</th></tr></thead><tbody>
+<tr><td>Requisiti e crediti ECM</td><td>Documentazione Agenas / provider (Hera Foundation)</td></tr>
+<tr><td>Nomi, affiliazioni, contatti faculty</td><td>Anagrafica interna / conferma diretta</td></tr>
+<tr><td>Date, sedi, orari evento</td><td>DATI-01 e programma ufficiale vigente</td></tr>
+<tr><td>Citazioni e dati scientifici</td><td>Articolo originale (PubMed/rivista), mai il riassunto</td></tr>
+<tr><td>Importi e condizioni sponsor</td><td>Contratto e prospectus firmati</td></tr>
+<tr><td>Norme fiscali/amministrative</td><td>Consulente — Claude prepara le domande, non la risposta</td></tr></tbody></table></section>
+<section><h3><span class="n">§4</span>Segnali che la conversazione è da chiudere</h3>
+<p>Risposte che si allungano senza aggiungere · ritorno di versioni già scartate · «dimenticanza» di vincoli dati all’inizio · tono che deriva. Sono i sintomi del contesto inquinato: consolidare (§1, ultima riga) e ripartire in chat nuova.</p></section>
+<p class="changelog">Changelog — v0.1: prima stesura.</p></article>
+<article id="m4"><div class="mod-head"><span class="mod-code">M4</span><div><h2>Contesto, chat e memoria: approfondimenti</h2><p class="mod-meta">v0.1 · 13/07/2026 · estende <a href="index.html#f4">F4</a> §§3–4 e 7 (i Projects: → M5)</p></div></div>
+<section><h3><span class="n">§1</span>Riconoscere il contesto inquinato (diagnosi rapida)</h3>
+<p>Quattro sintomi, in ordine di gravità: (1) Claude reintroduce una versione scartata; (2) «dimentica» un vincolo dato all’inizio; (3) mescola due compiti della stessa chat; (4) risposte generiche e prolisse. Dal sintomo 2 in poi: consolidare e ripartire (→ M3 §4). Prevenzione: una chat = un compito; i compiti lunghi si spezzano per fase.</p></section>
+<section><h3><span class="n">§2</span>Il titolo della chat è un attrezzo</h3>
+<div class="regola"><span class="badge b-sugg">REGOLA</span>Schema di naming: <strong>[EVENTO] · [COMPITO] · [STATO]</strong> — es. «Romanestesia26 · sollecito Viatris · inviato». Si rinomina ogni chat che produce qualcosa di usato davvero: tre secondi che rendono la cronologia un archivio.</div></section>
+<section><h3><span class="n">§3</span>La memoria in un team</h3>
+<ul><li>La memoria è <strong>personale</strong>: la tua sintesi non è quella del collega. Ciò che deve essere uguale per tutti va nelle istruzioni o nella conoscenza del Project (→ M5).</li>
+<li><strong>Igiene:</strong> ogni tanto verificare cosa la memoria ha ritenuto (Impostazioni → Capacità) — specie dopo periodi intensi su un tema, per non «trascinare» un evento chiuso in quello nuovo.</li>
+<li><strong>Chat in incognito</strong> <span class="badge b-fatto">FATTO</span>: escluse dalla memoria — utili per prove e test.</li>
+<li>Project diversi = memorie separate <span class="badge b-fatto">FATTO</span>: un motivo in più per lavorare <em>dentro</em> i Project.</li></ul></section>
+<section><h3><span class="n">§4</span>Errori d’organizzazione visti sul campo</h3>
+<ol><li>Tutte le chat sciolte, nessun Project → ogni giorno si ribriefa da capo.</li><li>La chat-fiume «Romanestesia» lunga tre mesi → contesto inquinato cronico.</li><li>Rinominare mai, cercare sempre.</li><li>Copiare a mano tra chat ciò che andava depositato una volta nella conoscenza.</li></ol></section>
+<p class="changelog">Changelog — v0.1: prima stesura.</p></article>
+<article id="m5"><div class="mod-head"><span class="mod-code">M5</span><div><h2>I Projects: il capitolo operativo</h2><p class="mod-meta">v0.1 · 13/07/2026 · estende <a href="index.html#f4">F4</a> §§5–6</p></div></div>
+<section><h3><span class="n">§1</span>Il ciclo di vita del Project evento</h3>
+<ol><li><strong>Nascita</strong> (avvio evento): istruzioni dal template, caricamento di scheda dati e programma vigente, condivisione «può usare» («può modificare» solo owner e vice).</li>
+<li><strong>Regime:</strong> la conoscenza si aggiorna a ogni versione ufficiale (sostituzione, non aggiunta); i risultati validati si depositano; le chat si rinominano (→ M4 §2).</li>
+<li><strong>Picco</strong> (ultime 6 settimane): revisione quindicinale della conoscenza — 10 minuti dell’owner: qualcosa di scaduto? manca l’ultima versione?</li>
+<li><strong>Chiusura:</strong> deposito delle «lezioni apprese», i template nati migrano in libreria (→ M6), poi <strong>si archivia</strong> — e le condivisioni si azzerano <span class="badge b-fatto">FATTO</span>.</li></ol></section>
+<section><h3><span class="n">§2</span>Le istruzioni dei Project trasversali (pronte all’uso)</h3>
+<div class="prompt"><span class="lab">Istruzioni · Project Amministrazione eventi</span><p>Sei l’assistente dell’amministrazione di B Best. Contesto: gestione amministrativa di eventi ECM; fatturazione con Fattureincloud. Tono professionale e asciutto; italiano. Regole: importi, scadenze e riferimenti di fattura vanno sempre marcati «da verificare sul gestionale» se non forniti nel messaggio; mai completare IBAN o dati di pagamento; le comunicazioni a sponsor citano sempre il riferimento contratto [RIF].</p></div>
+<div class="prompt"><span class="lab">Istruzioni · Project Comunicazione</span><p>Sei l’assistente della comunicazione di B Best/HERA per eventi medici ECM. Tono: professionale, chiaro, mai sensazionalista; italiano (inglese su richiesta). Regole: ogni claim scientifico deve avere fonte o essere marcato «da verificare»; niente promesse su crediti ECM non ancora accreditati; nomi di relatori solo se confermati; massimo 3 hashtag.</p></div></section>
+<section><h3><span class="n">§3</span>L’uso per ruolo (dentro il Project evento)</h3>
+<table><thead><tr><th>Ruolo</th><th>Chat tipiche</th><th>Prompt ricorrente da libreria</th></tr></thead><tbody>
+<tr><td><strong>Eventi</strong></td><td>fornitori, faculty-logistica, venue</td><td>Sollecito deliverable · richiesta preventivo</td></tr>
+<tr><td><strong>Amministrazione</strong></td><td>preventivi, solleciti pagamento</td><td>Promemoria fattura [RIF][SCADENZA]</td></tr>
+<tr><td><strong>Segreteria scientifica</strong></td><td>programma, quiz, corrispondenza EN</td><td>Bozze quiz ECM (con dicitura di validazione)</td></tr>
+<tr><td><strong>Comunicazione</strong></td><td>annunci, newsletter, post</td><td>Annuncio in N versioni per canale</td></tr></tbody></table></section>
+<section><h3><span class="n">§4</span>Governance minima</h3>
+<ul><li><strong>Owner:</strong> decide cosa entra nella conoscenza, revisione quindicinale, archivia a fine evento, risponde di ciò che il Project condiviso contiene (→ F6 §7).</li>
+<li><strong>Può modificare:</strong> owner + un vice; tutti gli altri «può usare».</li>
+<li><strong>Naming:</strong> «Romanestesia 2026» per gli eventi; i trasversali senza anno.</li></ul>
+<div class="regola"><span class="badge b-sugg">TEST</span>«Creo un Project per questo?» — ha vita oltre le due settimane E materiale proprio? Se no, è una chat.</div></section>
+<p class="changelog">Changelog — v0.1: prima stesura; istruzioni trasversali su DATI-01 v1.1.</p></article>
+<article id="m6"><div class="mod-head"><span class="mod-code">M6</span><div><h2>Collaborare: la libreria prompt come processo</h2><p class="mod-meta">v0.1 · 13/07/2026 · capitolo nuovo (anticipato in F2 §7 e F4 §6)</p></div></div>
+<section><h3><span class="n">§1</span>La scheda-template (formato standard)</h3>
+<div class="prompt"><span class="lab">Formato scheda</span><p>NOME: Sollecito deliverable sponsor · QUANDO USARLA: sponsor confermato che ritarda materiali (logo, grafiche…) · TEMPLATE: [il prompt con i campi [CAMPO: descrizione]] · ESEMPIO DI OUTPUT RIUSCITO: [una mail vera, anonimizzata] · OWNER: [ruolo] · VERSIONE: 1.0 · ULTIMO USO RIUSCITO: [mese]</p></div>
+<p>«Ultimo uso riuscito» è il campo che tiene viva la libreria: ciò che nessuno usa da sei mesi si rivede o si archivia.</p></section>
+<section><h3><span class="n">§2</span>Il flusso di deposito (30 secondi, o non accadrà)</h3>
+<ol><li>Un prompt funziona davvero → si chiede a Claude: <em>«trasforma questo prompt in template generico con campi [NOME: descrizione], nel formato scheda della nostra libreria»</em>.</li>
+<li>La scheda va nel documento libreria (Drive) <strong>e</strong> nella conoscenza del Project Segreteria — vive in un solo posto, gli altri la richiamano.</li>
+<li>Una riga nel canale del team: «nuovo template: sollecito deliverable».</li></ol></section>
+<section><h3><span class="n">§3</span>Il rito dei 15 minuti (mensile)</h3>
+<p>Una volta al mese, a rotazione, una persona: legge le schede nuove, segnala doppioni, propone una promozione («questo lo usiamo tutti: va nelle istruzioni del Project») e una pulizia. È l’intera manutenzione necessaria. <span class="badge b-sugg">SUGG</span> Primo appuntamento: due settimane dopo il corso, in coda al debrief dei compiti finali.</p></section>
+<section><h3><span class="n">§4</span>Condividere il lavoro, non solo i template</h3>
+<ul><li><strong>Il link alla chat</strong> (dove il piano lo consente) per far vedere <em>come</em> si è arrivati a un risultato: più istruttivo del solo output.</li>
+<li><strong>Passaggi di consegne:</strong> prima di ferie/assenze, la versione consolidata (→ M3 §1) delle conversazioni aperte si deposita nella conoscenza con nota «stato al [data]».</li>
+<li><strong>Standard di firma e tono:</strong> vivono nelle istruzioni dei Project (→ M5 §2), non nella memoria dei singoli.</li></ul></section>
+<section><h3><span class="n">§5</span>Le tre regole sociali</h3>
+<ol><li><strong>Chi trova, deposita</strong> — la libreria cresce per generosità, non per mandato.</li>
+<li><strong>Chi usa, aggiorna</strong> «ultimo uso riuscito» — un click di data.</li>
+<li><strong>Nessuna vergogna del prompt brutto</strong> — in libreria entrano anche i tentativi falliti istruttivi, nella sezione «così no».</li></ol></section>
+<p class="changelog">Changelog — v0.1: prima stesura.</p></article>
+</main></div>
+<footer class="page">Percorso formativo Claude per B Best e HERA · materiale interno riservato</footer>
+<script>
+const side=document.getElementById('side'),burger=document.getElementById('burger'),scrim=document.getElementById('scrim');
+function setMenu(o){side.classList.toggle('open',o);scrim.hidden=!o;scrim.classList.toggle('show',o);burger.setAttribute('aria-expanded',String(o));}
+if(burger){burger.addEventListener('click',()=>setMenu(!side.classList.contains('open')));scrim.addEventListener('click',()=>setMenu(false));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false);});side.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));}
+</script></body></html>
